@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_quotation_payment_terms" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit.quotation.payment.terms</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/field[@name='state']" position="before">
+                <button name="action_approve_payment_term" type="object" string="Approve Payment Term"
+                        class="btn-primary" invisible="not is_term_approval_needed"
+                        groups="account.group_account_manager"/>
+                <button name="action_approve_sending" type="object" string="Approve Sending"
+                        class="btn-primary" invisible="not is_send_approval_needed"
+                        groups="odt_quotation_payment_terms.group_send_approver"/>
+            </xpath>
+            <xpath expr="//div[hasclass('alert-warning')][@role='alert']" position="after">
+                <div class="alert alert-danger" role="alert" invisible="not is_term_approval_needed">
+                    This payment term is not the customer's default: the Finance Manager must approve it before the quotation is sent.
+                </div>
+                <div class="alert alert-danger" role="alert" invisible="not is_send_approval_needed">
+                    The customer is on the credit watch list: the Operations Manager or the Finance Manager must approve sending this quotation.
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/list/field[@name='name']" position="after">
+                <field name="is_special" optional="show"/>
+            </xpath>
+            <xpath expr="//page[@name='other_information']/group" position="inside">
+                <group string="Quotation Approvals" name="quotation_approvals"
+                       invisible="not term_approved_by_id and not send_approved_by_id">
+                    <field name="term_approved_by_id" invisible="not term_approved_by_id"/>
+                    <field name="term_approval_date" invisible="not term_approved_by_id"/>
+                    <field name="send_approved_by_id" invisible="not send_approved_by_id"/>
+                    <field name="send_approval_date" invisible="not send_approved_by_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

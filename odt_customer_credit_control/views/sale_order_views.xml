@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_customer_credit_control" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit.customer.credit.control</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/field[@name='state']" position="before">
+                <button name="%(credit_decision_action)d" type="action" string="Approve Credit"
+                        context="{'default_decision': 'approve'}" class="btn-primary"
+                        invisible="credit_approval != 'pending'"
+                        groups="account.group_account_manager"/>
+            </xpath>
+            <xpath expr="//div[hasclass('alert-warning')][@role='alert']" position="after">
+                <div class="alert alert-danger" role="alert" invisible="credit_approval != 'pending'">
+                    This order exceeds the customer's monthly credit cap or the company's monthly credit ceiling and waits for the Finance Manager's approval.
+                </div>
+            </xpath>
+            <field name="payment_term_id" position="after">
+                <field name="credit_share_pct" invisible="state not in ('draft', 'sent')"/>
+                <field name="credit_cap_pct" invisible="state not in ('draft', 'sent')"/>
+            </field>
+            <xpath expr="//page[@name='other_information']/group" position="inside">
+                <group string="Credit Approval" name="credit_approval" invisible="credit_approval == 'none'">
+                    <field name="credit_approval" readonly="1"/>
+                    <field name="credit_approved_by_id"/>
+                    <field name="credit_approval_date"/>
+                    <field name="credit_approval_note" readonly="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

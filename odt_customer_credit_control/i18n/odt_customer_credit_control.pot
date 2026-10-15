@@ -1,0 +1,757 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odt_customer_credit_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-14 14:36+0000\n"
+"PO-Revision-Date: 2026-10-14 14:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "%(company)s: credit watch list, %(day)s"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid ""
+"%(customer)s is on %(state)s: the order cannot be confirmed until the "
+"Finance Manager releases the customer."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/account_move.py:0
+msgid ""
+"%(invoice)s cannot be posted: %(customer)s is under an absolute credit "
+"block."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/stock_picking.py:0
+msgid ""
+"%(picking)s cannot be validated: %(customer)s is on credit hold or block "
+"until the Finance Manager releases the customer."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "%s is not blocked."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "%s is not on credit hold."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid "%s is not waiting for credit approval."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid ""
+"%s is under an absolute credit block: no quotation can be made for this "
+"customer."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid "%s waits for the Finance Manager's credit approval."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__block
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__res_partner__credit_state__block
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Absolute Block"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_account_payment_term__advance_pct
+msgid "Advance (%)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_order_form_inherit_customer_credit_control
+msgid "Approve Credit"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__approve
+msgid "Approve over Credit Limit"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__sale_order__credit_approval__approved
+msgid "Approved"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Block every quotation, order, delivery and invoice for this customer?"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_decision_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__company_id
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_search
+msgid "Company"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__company_id
+msgid "Company that made the sales; each company has its own ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_decision_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid ""
+"Confirmation waits for credit approval: the order would exceed the "
+"customer's monthly cap or the company's monthly ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__credit_approval
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_order_form_inherit_customer_credit_control
+msgid "Credit Approval"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__credit_approval_date
+msgid "Credit Approval Date"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__credit_approval_note
+msgid "Credit Approval Reason"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__credit_approved_by_id
+msgid "Credit Approved By"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_company_form_inherit_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Credit Control"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.actions.server,name:odt_customer_credit_control.ir_cron_credit_check_ir_actions_server
+msgid "Credit Control: nightly credit check"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.actions.server,name:odt_customer_credit_control.ir_cron_credit_watch_report_ir_actions_server
+msgid "Credit Control: weekly watch-list email"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.actions.act_window,name:odt_customer_credit_control.credit_decision_action
+#: model:ir.model,name:odt_customer_credit_control.model_credit_decision
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_decision_view_form
+msgid "Credit Decision"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.ui.menu,name:odt_customer_credit_control.credit_exposure_menu
+msgid "Credit Exposure"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__res_partner__credit_state__hold
+msgid "Credit Hold"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_company__hold_days
+msgid "Credit Hold After (Days Overdue)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_res_partner_filter_inherit_customer_credit_control
+msgid "Credit Hold or Block"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__credit_sales
+msgid "Credit Sales"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__credit_state
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_users__credit_state
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Credit State"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__credit_state_reason
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_users__credit_state_reason
+msgid "Credit State Reason"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_res_partner_filter_inherit_customer_credit_control
+msgid "Credit Watch List"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid "Credit approval needed"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__share_pct
+msgid "Credit sales divided by the company's monthly ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__currency_id
+msgid "Currency of the company; all amounts are in it."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__partner_id
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_search
+msgid "Customer"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__partner_id
+msgid "Customer (commercial entity) the credit sales belong to."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__cap_pct
+msgid "Customer Cap (%)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__credit_cap_pct
+msgid "Customer Credit Cap (%)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__credit_share_pct
+msgid "Customer Credit Share (%)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__partner_ids
+msgid "Customers"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid ""
+"Customers on the watch list or on credit hold, largest overdue amount first."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_decision__partner_ids
+msgid "Customers whose credit state changes."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__decision
+msgid "Decision"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_account_move__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_account_payment_term__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_product_template__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_company__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__display_name
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.actions.act_window,help:odt_customer_credit_control.credit_exposure_action
+msgid ""
+"Each customer's confirmed credit sales of the month appear here, with their "
+"share of the company's monthly credit ceiling and their cap."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_product_product__is_credit_excluded
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_product_template__is_credit_excluded
+msgid "Excluded from Credit Totals"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_sale_order__credit_approved_by_id
+msgid "Finance Manager who approved the order over the credit limit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__month
+msgid "First day of the calendar month of confirmation."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__is_credit_flagged
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_users__is_credit_flagged
+msgid "Flagged by Finance"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid "Give the reason for approving over the credit limit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Give the reason for changing the credit state."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_account_move__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_account_payment_term__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_product_template__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_company__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_sale_order__id
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__hold_cleared_invoice_ids
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_users__hold_cleared_invoice_ids
+msgid "Invoices Covered by a Lifted Hold"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__unblock
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Lift Absolute Block"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__lift_hold
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Lift Credit Hold"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_product_product__is_special
+#: model:ir.model.fields,help:odt_customer_credit_control.field_product_template__is_special
+msgid "Marks the product as a special item under the company's sales policy."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__month
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_search
+msgid "Month"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Monthly Cap"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__credit_ceiling
+msgid "Monthly Ceiling"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_partner__credit_cap_pct
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_users__credit_cap_pct
+msgid "Monthly Credit Cap (%)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_res_company__credit_ceiling
+msgid "Monthly Credit Ceiling"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.actions.act_window,name:odt_customer_credit_control.credit_exposure_action
+#: model:ir.model,name:odt_customer_credit_control.model_credit_exposure
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_form
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_list
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_search
+msgid "Monthly Credit Exposure"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_company__credit_ceiling
+msgid ""
+"Most credit sales the company accepts in one calendar month, in the company "
+"currency. Each customer's cap is a share of it. 0 means no ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_partner__credit_cap_pct
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_users__credit_cap_pct
+msgid ""
+"Most credit sales this customer may take in a calendar month, as a share of "
+"the selling company's monthly credit ceiling. 0 means no cap."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.actions.act_window,help:odt_customer_credit_control.credit_exposure_action
+msgid "No credit sales this month"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__res_partner__credit_state__normal
+msgid "Normal"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_partner__credit_state
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_users__credit_state
+msgid ""
+"Normal; Watch List (an overdue invoice or a flag by Finance); Credit Hold "
+"(no new orders or deliveries); Absolute Block (no quotations, orders, "
+"deliveries or invoices)."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__sale_order__credit_approval__none
+msgid "Not Needed"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Oldest Due Date"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Only Finance can flag a customer for credit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py:0
+msgid "Only the Finance Manager can approve an order over a credit limit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Only the Finance Manager can change a customer's credit state or cap."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Only the Finance Manager can change a customer's credit state."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__order_ids
+msgid "Orders"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_decision__order_ids
+msgid "Orders approved over the credit limit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_search
+msgid "Over Cap"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Overdue Amount"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_partner__hold_cleared_invoice_ids
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_users__hold_cleared_invoice_ids
+msgid ""
+"Overdue invoices the Finance Manager accepted when lifting a credit hold; "
+"they do not set the hold again. Paid invoices drop out nightly."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_account_payment_term
+msgid "Payment Terms"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__hold
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Put on Credit Hold"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__flag
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Put on Watch List"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_decision__reason
+msgid "Reason"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.actions.act_window,help:odt_customer_credit_control.credit_decision_action
+msgid ""
+"Record a credit decision for the selected customers or orders, with its "
+"reason."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__credit_decision__decision__unflag
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_partner_form_inherit_customer_credit_control
+msgid "Remove Finance Flag"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py:0
+msgid "Salesperson"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_partner__is_credit_flagged
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_users__is_credit_flagged
+msgid ""
+"Set by Finance for an open dispute or an order problem; keeps the customer "
+"on the watch list until Finance removes it."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_credit_exposure__share_pct
+msgid "Share of Ceiling (%)"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_account_payment_term__advance_pct
+msgid ""
+"Share of the order paid in advance, from 0 to 100. At 100 the order is paid "
+"in full before delivery and is not counted as a credit sale."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_product_product__is_special
+#: model:ir.model.fields,field_description:odt_customer_credit_control.field_product_template__is_special
+msgid "Special Item"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/account_payment_term.py:0
+msgid "The advance of a payment term is between 0 and 100%."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__credit_ceiling
+msgid "The company's monthly credit ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__credit_sales
+msgid "The customer's credit sales confirmed in the month, with VAT."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_sale_order__credit_share_pct
+msgid ""
+"The customer's credit sales of the current month as a share of the company's"
+" monthly ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_exposure__cap_pct
+msgid "The customer's monthly cap, as a share of the ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_sale_order__credit_cap_pct
+msgid "The customer's monthly cap, as a share of the company's ceiling."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_company__hold_days
+msgid ""
+"The nightly credit check puts a customer on credit hold once any of its "
+"invoices is overdue by more than this many days."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_search
+msgid "This Month"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.view_order_form_inherit_customer_credit_control
+msgid ""
+"This order exceeds the customer's monthly credit cap or the company's "
+"monthly credit ceiling and waits for the Finance Manager's approval."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_exposure_view_list
+msgid "Total"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model,name:odt_customer_credit_control.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__sale_order__credit_approval__pending
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_sale_order__credit_approval
+msgid ""
+"Waiting for Approval: confirming the order would exceed the customer's "
+"monthly cap or the company's monthly ceiling, so the Finance Manager must "
+"approve it first."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields.selection,name:odt_customer_credit_control.selection__res_partner__credit_state__watch
+msgid "Watch List"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_decision__decision
+msgid "What is decided for the selected customers or orders."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_sale_order__credit_approval_date
+msgid "When the order was approved over the credit limit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_product_product__is_credit_excluded
+#: model:ir.model.fields,help:odt_customer_credit_control.field_product_template__is_credit_excluded
+msgid ""
+"When the product is also a special item, its order lines are left out of the"
+" customer's and the company's monthly credit sales."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_partner__credit_state_reason
+#: model:ir.model.fields,help:odt_customer_credit_control.field_res_users__credit_state_reason
+msgid ""
+"Why Finance flagged the customer, or put it on hold or block, or lifted the "
+"hold."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_sale_order__credit_approval_note
+msgid "Why the Finance Manager approved the order over the credit limit."
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model_terms:ir.ui.view,arch_db:odt_customer_credit_control.credit_decision_view_form
+msgid "Why, as it will be recorded"
+msgstr ""
+
+#. module: odt_customer_credit_control
+#: model:ir.model.fields,help:odt_customer_credit_control.field_credit_decision__reason
+msgid "Why; recorded on the customer or the order."
+msgstr ""

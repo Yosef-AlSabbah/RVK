@@ -1,0 +1,263 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odt_quotation_payment_terms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 07:11+0000\n"
+"PO-Revision-Date: 2026-10-15 07:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%(customer)s is on the credit watch list: the Operations Manager or the "
+"Finance Manager must approve sending %(order)s."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%(order)s holds special items, which need a payment term with at least "
+"%(minimum)s%% advance; %(term)s has %(advance)s%%. Choose a term with at "
+"least %(minimum)s%% advance."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%(order)s is on %(term)s, which is not the customer's default payment term: "
+"the Finance Manager must approve it on the quotation before it is sent."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid "%s does not need a payment term approval."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid "%s does not need a sending approval."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%s has no payment term: select the payment term agreed with the customer "
+"before sending the quotation."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid "Approve Payment Term"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid "Approve Sending"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:res.groups,comment:odt_quotation_payment_terms.group_send_approver
+msgid ""
+"Approves sending quotations to customers on the credit watch list (the "
+"Operations Manager and the Finance Manager)."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_res_company__display_name
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__display_name
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__term_approved_by_id
+msgid ""
+"Finance Manager who approved a payment term other than the customer's "
+"default on this quotation."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_res_company__id
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__id
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid "Only the Finance Manager can approve a quotation's payment term."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"Only the Operations Manager or the Finance Manager can approve sending a "
+"quotation to a customer on the credit watch list."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__send_approved_by_id
+msgid ""
+"Operations or Finance Manager who approved sending this quotation to a "
+"customer on the credit watch list."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__term_approval_date
+msgid "Payment Term Approval Date"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__term_approved_by_id
+msgid "Payment Term Approved By"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__is_term_approval_needed
+msgid "Payment Term Needs Approval"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:res.groups.privilege,name:odt_quotation_payment_terms.res_groups_privilege_quotation_approval
+msgid "Quotation Approval"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid "Quotation Approvals"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:res.groups,name:odt_quotation_payment_terms.group_send_approver
+msgid "Quotation Send Approver"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__send_approval_date
+msgid "Sending Approval Date"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__send_approved_by_id
+msgid "Sending Approved By"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__is_send_approval_needed
+msgid "Sending Needs Approval"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_res_company__special_min_advance
+msgid ""
+"Smallest advance, from 0 to 100%, a payment term must carry for a quotation "
+"holding a special item to be sent. 0 means no minimum."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_purchase_order_line__is_special
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order_line__is_special
+msgid "Special Item"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_res_company__special_min_advance
+msgid "Special Items Minimum Advance (%)"
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__is_send_approval_needed
+msgid ""
+"The customer is on the credit watch list and sending the quotation has not "
+"been approved yet."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid ""
+"The customer is on the credit watch list: the Operations Manager or the "
+"Finance Manager must approve sending this quotation."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_purchase_order_line__is_special
+msgid ""
+"The product is a special item, as on the sales order line the purchase was "
+"raised for."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order_line__is_special
+msgid ""
+"The product is a special item: its quotation needs the company's special-"
+"item minimum advance."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__is_term_approval_needed
+msgid ""
+"The quotation's payment term is not the customer's default and the Finance "
+"Manager has not approved it yet."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/res_company.py:0
+msgid "The special items minimum advance is between 0 and 100%."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid ""
+"This payment term is not the customer's default: the Finance Manager must "
+"approve it before the quotation is sent."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__send_approval_date
+msgid "When sending to the watch-listed customer was approved."
+msgstr ""
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__term_approval_date
+msgid "When the payment term was approved."
+msgstr ""

@@ -1,0 +1,575 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * odt_customer_credit_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-14 14:36+0000\n"
+"PO-Revision-Date: 2026-10-14 14:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+#, python-format
+msgid "%(company)s: credit watch list, %(day)s"
+msgstr "%(company)s: قائمة المراقبة الائتمانية، %(day)s"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+#, python-format
+msgid "%(customer)s is on %(state)s: the order cannot be confirmed until the Finance Manager releases the customer."
+msgstr "العميل %(customer)s في حالة %(state)s: لا يمكن تأكيد الطلب حتى يرفع المدير المالي القيد عن العميل."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/account_move.py
+#, python-format
+msgid "%(invoice)s cannot be posted: %(customer)s is under an absolute credit block."
+msgstr "لا يمكن ترحيل %(invoice)s: العميل %(customer)s تحت حظر ائتماني مطلق."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/stock_picking.py
+#, python-format
+msgid "%(picking)s cannot be validated: %(customer)s is on credit hold or block until the Finance Manager releases the customer."
+msgstr "لا يمكن اعتماد %(picking)s: العميل %(customer)s موقوف ائتمانيًا أو محظور حتى يرفع المدير المالي القيد عنه."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+#, python-format
+msgid "%s is not blocked."
+msgstr "العميل %s غير محظور."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+#, python-format
+msgid "%s is not on credit hold."
+msgstr "العميل %s ليس موقوفًا ائتمانيًا."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+#, python-format
+msgid "%s is not waiting for credit approval."
+msgstr "الطلب %s لا ينتظر موافقة ائتمانية."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+#, python-format
+msgid "%s is under an absolute credit block: no quotation can be made for this customer."
+msgstr "العميل %s تحت حظر ائتماني مطلق: لا يمكن إنشاء عرض سعر لهذا العميل."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+#, python-format
+msgid "%s waits for the Finance Manager's credit approval."
+msgstr "%s بانتظار الموافقة الائتمانية من المدير المالي."
+
+#. module: odt_customer_credit_control
+msgid "Absolute Block"
+msgstr "حظر مطلق"
+
+#. module: odt_customer_credit_control
+msgid "Advance (%)"
+msgstr "الدفعة المقدمة (%)"
+
+#. module: odt_customer_credit_control
+msgid "Approve Credit"
+msgstr "الموافقة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Approve over Credit Limit"
+msgstr "الموافقة بما يتجاوز الحد الائتماني"
+
+#. module: odt_customer_credit_control
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: odt_customer_credit_control
+msgid "Block every quotation, order, delivery and invoice for this customer?"
+msgstr "حظر جميع عروض الأسعار والطلبات والتسليمات والفواتير لهذا العميل؟"
+
+#. module: odt_customer_credit_control
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: odt_customer_credit_control
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: odt_customer_credit_control
+msgid "Company"
+msgstr "الشركة"
+
+#. module: odt_customer_credit_control
+msgid "Company that made the sales; each company has its own ceiling."
+msgstr "الشركة البائعة؛ لكل شركة سقفها الخاص."
+
+#. module: odt_customer_credit_control
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+msgid "Confirmation waits for credit approval: the order would exceed the customer's monthly cap or the company's monthly ceiling."
+msgstr "التأكيد بانتظار الموافقة الائتمانية: الطلب سيتجاوز الحد الشهري للعميل أو السقف الشهري للشركة."
+
+#. module: odt_customer_credit_control
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: odt_customer_credit_control
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: odt_customer_credit_control
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: odt_customer_credit_control
+msgid "Credit Approval"
+msgstr "الموافقة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit Approval Date"
+msgstr "تاريخ الموافقة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit Approval Reason"
+msgstr "سبب الموافقة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit Approved By"
+msgstr "وافق عليه ائتمانيًا"
+
+#. module: odt_customer_credit_control
+msgid "Credit Control"
+msgstr "الرقابة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit Control: nightly credit check"
+msgstr "الرقابة الائتمانية: الفحص الائتماني الليلي"
+
+#. module: odt_customer_credit_control
+msgid "Credit Control: weekly watch-list email"
+msgstr "الرقابة الائتمانية: بريد قائمة المراقبة الأسبوعي"
+
+#. module: odt_customer_credit_control
+msgid "Credit Decision"
+msgstr "قرار ائتماني"
+
+#. module: odt_customer_credit_control
+msgid "Credit Exposure"
+msgstr "التعرض الائتماني"
+
+#. module: odt_customer_credit_control
+msgid "Credit Hold"
+msgstr "إيقاف ائتماني"
+
+#. module: odt_customer_credit_control
+msgid "Credit Hold After (Days Overdue)"
+msgstr "الإيقاف الائتماني بعد (أيام التأخر)"
+
+#. module: odt_customer_credit_control
+msgid "Credit Hold or Block"
+msgstr "موقوف ائتمانيًا أو محظور"
+
+#. module: odt_customer_credit_control
+msgid "Credit Sales"
+msgstr "المبيعات الآجلة"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Credit State"
+msgstr "الحالة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit State Reason"
+msgstr "سبب الحالة الائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit Watch List"
+msgstr "قائمة المراقبة الائتمانية"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+msgid "Credit approval needed"
+msgstr "مطلوب موافقة ائتمانية"
+
+#. module: odt_customer_credit_control
+msgid "Credit sales divided by the company's monthly ceiling."
+msgstr "المبيعات الآجلة مقسومة على السقف الشهري للشركة."
+
+#. module: odt_customer_credit_control
+msgid "Currency"
+msgstr "العملة"
+
+#. module: odt_customer_credit_control
+msgid "Currency of the company; all amounts are in it."
+msgstr "عملة الشركة؛ جميع المبالغ بها."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Customer"
+msgstr "العميل"
+
+#. module: odt_customer_credit_control
+msgid "Customer (commercial entity) the credit sales belong to."
+msgstr "العميل (الكيان التجاري) الذي تعود إليه المبيعات الآجلة."
+
+#. module: odt_customer_credit_control
+msgid "Customer Cap (%)"
+msgstr "حد العميل (%)"
+
+#. module: odt_customer_credit_control
+msgid "Customer Credit Cap (%)"
+msgstr "الحد الائتماني للعميل (%)"
+
+#. module: odt_customer_credit_control
+msgid "Customer Credit Share (%)"
+msgstr "حصة العميل الائتمانية (%)"
+
+#. module: odt_customer_credit_control
+msgid "Customers"
+msgstr "العملاء"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Customers on the watch list or on credit hold, largest overdue amount first."
+msgstr "العملاء في قائمة المراقبة أو الموقوفون ائتمانيًا، مرتبون من الأكبر مبلغًا متأخرًا."
+
+#. module: odt_customer_credit_control
+msgid "Customers whose credit state changes."
+msgstr "العملاء الذين تتغير حالتهم الائتمانية."
+
+#. module: odt_customer_credit_control
+msgid "Decision"
+msgstr "القرار"
+
+#. module: odt_customer_credit_control
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: odt_customer_credit_control
+msgid "Each customer's confirmed credit sales of the month appear here, with their share of the company's monthly credit ceiling and their cap."
+msgstr "تظهر هنا المبيعات الآجلة المؤكدة لكل عميل خلال الشهر، مع حصته من السقف الائتماني الشهري للشركة وحده."
+
+#. module: odt_customer_credit_control
+msgid "Excluded from Credit Totals"
+msgstr "مستبعد من إجماليات الائتمان"
+
+#. module: odt_customer_credit_control
+msgid "Finance Manager who approved the order over the credit limit."
+msgstr "المدير المالي الذي وافق على الطلب بما يتجاوز الحد الائتماني."
+
+#. module: odt_customer_credit_control
+msgid "First day of the calendar month of confirmation."
+msgstr "اليوم الأول من الشهر الميلادي الذي تم فيه التأكيد."
+
+#. module: odt_customer_credit_control
+msgid "Flagged by Finance"
+msgstr "مؤشَّر من المالية"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+msgid "Give the reason for approving over the credit limit."
+msgstr "اذكر سبب الموافقة بما يتجاوز الحد الائتماني."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Give the reason for changing the credit state."
+msgstr "اذكر سبب تغيير الحالة الائتمانية."
+
+#. module: odt_customer_credit_control
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: odt_customer_credit_control
+msgid "Invoices Covered by a Lifted Hold"
+msgstr "الفواتير المشمولة بإيقاف مرفوع"
+
+#. module: odt_customer_credit_control
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: odt_customer_credit_control
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: odt_customer_credit_control
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: odt_customer_credit_control
+msgid "Lift Absolute Block"
+msgstr "رفع الحظر المطلق"
+
+#. module: odt_customer_credit_control
+msgid "Lift Credit Hold"
+msgstr "رفع الإيقاف الائتماني"
+
+#. module: odt_customer_credit_control
+msgid "Marks the product as a special item under the company's sales policy."
+msgstr "يحدد المنتج كصنف خاص وفق سياسة المبيعات في الشركة."
+
+#. module: odt_customer_credit_control
+msgid "Month"
+msgstr "الشهر"
+
+#. module: odt_customer_credit_control
+msgid "Monthly Cap"
+msgstr "الحد الشهري"
+
+#. module: odt_customer_credit_control
+msgid "Monthly Ceiling"
+msgstr "السقف الشهري"
+
+#. module: odt_customer_credit_control
+msgid "Monthly Credit Cap (%)"
+msgstr "الحد الائتماني الشهري (%)"
+
+#. module: odt_customer_credit_control
+msgid "Monthly Credit Ceiling"
+msgstr "السقف الائتماني الشهري"
+
+#. module: odt_customer_credit_control
+msgid "Monthly Credit Exposure"
+msgstr "التعرض الائتماني الشهري"
+
+#. module: odt_customer_credit_control
+msgid "Most credit sales the company accepts in one calendar month, in the company currency. Each customer's cap is a share of it. 0 means no ceiling."
+msgstr "أقصى مبيعات آجلة تقبلها الشركة في شهر ميلادي واحد، بعملة الشركة. حد كل عميل حصة منه. القيمة 0 تعني عدم وجود سقف."
+
+#. module: odt_customer_credit_control
+msgid "Most credit sales this customer may take in a calendar month, as a share of the selling company's monthly credit ceiling. 0 means no cap."
+msgstr "أقصى مبيعات آجلة يمكن لهذا العميل الحصول عليها في شهر ميلادي، كحصة من السقف الائتماني الشهري للشركة البائعة. القيمة 0 تعني عدم وجود حد."
+
+#. module: odt_customer_credit_control
+msgid "No credit sales this month"
+msgstr "لا توجد مبيعات آجلة هذا الشهر"
+
+#. module: odt_customer_credit_control
+msgid "Normal"
+msgstr "عادي"
+
+#. module: odt_customer_credit_control
+msgid "Normal; Watch List (an overdue invoice or a flag by Finance); Credit Hold (no new orders or deliveries); Absolute Block (no quotations, orders, deliveries or invoices)."
+msgstr "عادي؛ قائمة المراقبة (فاتورة متأخرة أو مؤشر من المالية)؛ إيقاف ائتماني (لا طلبات ولا تسليمات جديدة)؛ حظر مطلق (لا عروض أسعار ولا طلبات ولا تسليمات ولا فواتير)."
+
+#. module: odt_customer_credit_control
+msgid "Not Needed"
+msgstr "غير مطلوبة"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Oldest Due Date"
+msgstr "أقدم تاريخ استحقاق"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Only Finance can flag a customer for credit."
+msgstr "المالية فقط يمكنها تأشير عميل ائتمانيًا."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/sale_order.py
+msgid "Only the Finance Manager can approve an order over a credit limit."
+msgstr "المدير المالي فقط يمكنه الموافقة على طلب يتجاوز الحد الائتماني."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Only the Finance Manager can change a customer's credit state or cap."
+msgstr "المدير المالي فقط يمكنه تغيير الحالة الائتمانية للعميل أو حده."
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Only the Finance Manager can change a customer's credit state."
+msgstr "المدير المالي فقط يمكنه تغيير الحالة الائتمانية للعميل."
+
+#. module: odt_customer_credit_control
+msgid "Orders"
+msgstr "الطلبات"
+
+#. module: odt_customer_credit_control
+msgid "Orders approved over the credit limit."
+msgstr "الطلبات الموافق عليها بما يتجاوز الحد الائتماني."
+
+#. module: odt_customer_credit_control
+msgid "Over Cap"
+msgstr "متجاوز للحد"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Overdue Amount"
+msgstr "المبلغ المتأخر"
+
+#. module: odt_customer_credit_control
+msgid "Overdue invoices the Finance Manager accepted when lifting a credit hold; they do not set the hold again. Paid invoices drop out nightly."
+msgstr "فواتير متأخرة قبلها المدير المالي عند رفع الإيقاف الائتماني؛ لا تعيد الإيقاف مجددًا. تُحذف الفواتير المدفوعة ليلًا."
+
+#. module: odt_customer_credit_control
+msgid "Payment Terms"
+msgstr "شروط السداد"
+
+#. module: odt_customer_credit_control
+msgid "Product"
+msgstr "المنتج"
+
+#. module: odt_customer_credit_control
+msgid "Put on Credit Hold"
+msgstr "إيقاف ائتماني"
+
+#. module: odt_customer_credit_control
+msgid "Put on Watch List"
+msgstr "إضافة إلى قائمة المراقبة"
+
+#. module: odt_customer_credit_control
+msgid "Reason"
+msgstr "السبب"
+
+#. module: odt_customer_credit_control
+msgid "Record a credit decision for the selected customers or orders, with its reason."
+msgstr "سجّل قرارًا ائتمانيًا للعملاء أو الطلبات المحددة مع سببه."
+
+#. module: odt_customer_credit_control
+msgid "Remove Finance Flag"
+msgstr "إزالة مؤشر المالية"
+
+#. module: odt_customer_credit_control
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/res_partner.py
+msgid "Salesperson"
+msgstr "مندوب المبيعات"
+
+#. module: odt_customer_credit_control
+msgid "Set by Finance for an open dispute or an order problem; keeps the customer on the watch list until Finance removes it."
+msgstr "تضعه المالية لنزاع قائم أو مشكلة في طلب؛ يبقي العميل في قائمة المراقبة حتى تزيله المالية."
+
+#. module: odt_customer_credit_control
+msgid "Share of Ceiling (%)"
+msgstr "الحصة من السقف (%)"
+
+#. module: odt_customer_credit_control
+msgid "Share of the order paid in advance, from 0 to 100. At 100 the order is paid in full before delivery and is not counted as a credit sale."
+msgstr "نسبة الطلب المدفوعة مقدمًا، من 0 إلى 100. عند 100 يُدفع الطلب كاملًا قبل التسليم ولا يُحتسب بيعًا آجلًا."
+
+#. module: odt_customer_credit_control
+msgid "Special Item"
+msgstr "صنف خاص"
+
+#. module: odt_customer_credit_control
+#. odoo-python
+#: code:addons/odt_customer_credit_control/models/account_payment_term.py
+msgid "The advance of a payment term is between 0 and 100%."
+msgstr "الدفعة المقدمة لشرط الدفع بين 0 و100%."
+
+#. module: odt_customer_credit_control
+msgid "The company's monthly credit ceiling."
+msgstr "السقف الائتماني الشهري للشركة."
+
+#. module: odt_customer_credit_control
+msgid "The customer's credit sales confirmed in the month, with VAT."
+msgstr "المبيعات الآجلة المؤكدة للعميل خلال الشهر، شاملة ضريبة القيمة المضافة."
+
+#. module: odt_customer_credit_control
+msgid "The customer's credit sales of the current month as a share of the company's monthly ceiling."
+msgstr "المبيعات الآجلة للعميل في الشهر الحالي كحصة من السقف الشهري للشركة."
+
+#. module: odt_customer_credit_control
+msgid "The customer's monthly cap, as a share of the ceiling."
+msgstr "الحد الشهري للعميل كحصة من السقف."
+
+#. module: odt_customer_credit_control
+msgid "The customer's monthly cap, as a share of the company's ceiling."
+msgstr "الحد الشهري للعميل كحصة من سقف الشركة."
+
+#. module: odt_customer_credit_control
+msgid "The nightly credit check puts a customer on credit hold once any of its invoices is overdue by more than this many days."
+msgstr "يوقف الفحص الائتماني الليلي العميل ائتمانيًا متى تأخرت أي من فواتيره أكثر من هذا العدد من الأيام."
+
+#. module: odt_customer_credit_control
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: odt_customer_credit_control
+msgid "This order exceeds the customer's monthly credit cap or the company's monthly credit ceiling and waits for the Finance Manager's approval."
+msgstr "يتجاوز هذا الطلب الحد الائتماني الشهري للعميل أو السقف الائتماني الشهري للشركة، وهو بانتظار موافقة المدير المالي."
+
+#. module: odt_customer_credit_control
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: odt_customer_credit_control
+msgid "Transfer"
+msgstr "تحويل"
+
+#. module: odt_customer_credit_control
+msgid "Waiting for Approval"
+msgstr "بانتظار الموافقة"
+
+#. module: odt_customer_credit_control
+msgid "Waiting for Approval: confirming the order would exceed the customer's monthly cap or the company's monthly ceiling, so the Finance Manager must approve it first."
+msgstr "بانتظار الموافقة: تأكيد الطلب سيتجاوز الحد الشهري للعميل أو السقف الشهري للشركة، لذا يجب أن يوافق عليه المدير المالي أولًا."
+
+#. module: odt_customer_credit_control
+msgid "Watch List"
+msgstr "قائمة المراقبة"
+
+#. module: odt_customer_credit_control
+msgid "What is decided for the selected customers or orders."
+msgstr "ما يُقرَّر للعملاء أو الطلبات المحددة."
+
+#. module: odt_customer_credit_control
+msgid "When the order was approved over the credit limit."
+msgstr "متى تمت الموافقة على الطلب بما يتجاوز الحد الائتماني."
+
+#. module: odt_customer_credit_control
+msgid "When the product is also a special item, its order lines are left out of the customer's and the company's monthly credit sales."
+msgstr "عندما يكون المنتج صنفًا خاصًا أيضًا، تُستبعد بنود طلباته من المبيعات الآجلة الشهرية للعميل والشركة."
+
+#. module: odt_customer_credit_control
+msgid "Why Finance flagged the customer, or put it on hold or block, or lifted the hold."
+msgstr "سبب تأشير المالية للعميل أو إيقافه أو حظره أو رفع الإيقاف."
+
+#. module: odt_customer_credit_control
+msgid "Why the Finance Manager approved the order over the credit limit."
+msgstr "سبب موافقة المدير المالي على الطلب بما يتجاوز الحد الائتماني."
+
+#. module: odt_customer_credit_control
+msgid "Why, as it will be recorded"
+msgstr "السبب كما سيُسجَّل"
+
+#. module: odt_customer_credit_control
+msgid "Why; recorded on the customer or the order."
+msgstr "السبب؛ يُسجَّل على العميل أو الطلب."
+

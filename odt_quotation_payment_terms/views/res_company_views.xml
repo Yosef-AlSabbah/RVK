@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_inherit_quotation_payment_terms" model="ir.ui.view">
+        <field name="name">res.company.view.form.inherit.quotation.payment.terms</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="odt_customer_credit_control.view_company_form_inherit_customer_credit_control"/>
+        <field name="arch" type="xml">
+            <field name="hold_days" position="after">
+                <field name="special_min_advance"/>
+            </field>
+        </field>
+    </record>
+</odoo>

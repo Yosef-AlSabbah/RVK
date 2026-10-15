@@ -1,0 +1,543 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odt_supplier_payment_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 07:17+0000\n"
+"PO-Revision-Date: 2026-10-15 07:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid ""
+"%(account)s is a payroll expense account: a payment to shareholder "
+"%(partner)s cannot be posted to it. Post it to the shareholder's account "
+"instead."
+msgstr "%(account)s حساب مصروفات رواتب: لا يمكن ترحيل دفعة إلى المساهم %(partner)s عليه. رحّلها إلى حساب المساهم بدلاً من ذلك."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_batch_payment.py:0
+msgid ""
+"%(batch)s cannot be validated: these bills are not cleared to pay (Should Be"
+" Paid is not Yes): %(bills)s."
+msgstr "لا يمكن اعتماد %(batch)s: هذه الفواتير غير مُجازة للدفع (قيمة \"يجب دفعها\" ليست نعم): %(bills)s."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid "%(payment)s cannot be posted before these approvals: %(levels)s."
+msgstr "لا يمكن ترحيل %(payment)s قبل هذه الموافقات: %(levels)s."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid "%(payment)s is not a blocked duplicate."
+msgstr "%(payment)s ليست دفعة مكررة محظورة."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid "%(payment)s needs no further approval."
+msgstr "%(payment)s لا تحتاج إلى موافقة أخرى."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid ""
+"%(payment)s repeats %(earlier)s (same vendor, amount and reference). It is "
+"blocked until an administrator releases it."
+msgstr "%(payment)s تكرر %(earlier)s (المورد والمبلغ والمرجع نفسها). وهي محظورة حتى يفرج عنها مسؤول النظام."
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_form_inherit_payment_control
+msgid ""
+"<span> (same vendor, amount and reference). It is blocked until an "
+"administrator releases it.</span>"
+msgstr "<span> (المورد والمبلغ والمرجع نفسها). وهي محظورة حتى يفرج عنها مسؤول النظام.</span>"
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_form_inherit_payment_control
+msgid "<span>This payment repeats </span>"
+msgstr "<span>هذه الدفعة تكرر </span>"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_account_account
+msgid "Account"
+msgstr "الحساب"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_account_payment__is_duplicate_released
+msgid ""
+"An administrator released this payment although it repeats an earlier one."
+msgstr "أفرج مسؤول النظام عن هذه الدفعة رغم أنها تكرر دفعة سابقة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_account_payment__duplicate_of_id
+msgid ""
+"An earlier outgoing vendor payment with the same vendor, amount and memo. "
+"This payment is blocked until an administrator releases it."
+msgstr "دفعة صادرة سابقة لمورد بالمورد والمبلغ والمذكرة نفسها. هذه الدفعة محظورة حتى يفرج عنها مسؤول النظام."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__date
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Approval Date"
+msgstr "تاريخ الموافقة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment__approval_state
+msgid "Approval Status"
+msgstr "حالة الموافقة"
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/res_company.py:0
+msgid "Approval thresholds cannot be negative."
+msgstr "لا يمكن أن تكون حدود الموافقة سالبة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment__approval_ids
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_form_inherit_payment_control
+msgid "Approvals"
+msgstr "الموافقات"
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.actions.act_window,help:odt_supplier_payment_control.payment_approval_action
+msgid ""
+"Approvals are given from vendor payments above the company thresholds, with "
+"the Approve button."
+msgstr "تُمنح الموافقات من دفعات الموردين التي تتجاوز حدود الشركة، بزر الموافقة."
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_form_inherit_payment_control
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__approved
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid "Approved at the %(level)s level by %(user)s."
+msgstr "تمت الموافقة على مستوى %(level)s من قبل %(user)s."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__user_id
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Approver"
+msgstr "المعتمِد"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_account_batch_payment
+msgid "Batch Payment"
+msgstr "الدفعة المجمعة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__blocked
+msgid "Blocked"
+msgstr "محظورة"
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_search_inherit_payment_control
+msgid "Blocked Duplicates"
+msgstr "الدفعات المكررة المحظورة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__payment_approval__level__ceo
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Chief Executive"
+msgstr "الرئيس التنفيذي"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_company__approval_threshold_3
+msgid "Chief Executive Approval Above"
+msgstr "موافقة الرئيس التنفيذي فوق"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_account__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_batch_payment__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_move__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment_register__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_company__display_name
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_partner__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment__duplicate_of_id
+msgid "Duplicate Of"
+msgstr "مكررة من"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment__is_duplicate_released
+msgid "Duplicate Released"
+msgstr "تم الإفراج عن المكررة"
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid ""
+"Duplicate released by %(user)s: %(payment)s may be paid although it repeats "
+"%(earlier)s (same vendor, amount and reference)."
+msgstr "أفرج %(user)s عن الدفعة المكررة: يمكن دفع %(payment)s رغم أنها تكرر %(earlier)s (المورد والمبلغ والمرجع نفسها)."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/res_company.py:0
+msgid "Each approval threshold must be above the one of the level before it."
+msgstr "يجب أن يكون كل حد موافقة أعلى من حد المستوى الذي قبله."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__payment_approval__level__finance
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Finance Manager"
+msgstr "المدير المالي"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_company__approval_threshold_1
+msgid "Finance Manager Approval Above"
+msgstr "موافقة المدير المالي فوق"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_account__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_batch_payment__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_move__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_payment_register__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_company__id
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_partner__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__level
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Level"
+msgstr "المستوى"
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.actions.act_window,help:odt_supplier_payment_control.payment_approval_action
+msgid "No payment approval yet"
+msgstr "لا توجد موافقات دفع بعد"
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid "Only an administrator can release a duplicate payment."
+msgstr "لا يفرج عن الدفعة المكررة إلا مسؤول النظام."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid "Only draft outgoing vendor payments are approved."
+msgstr "لا تُعتمد إلا دفعات الموردين الصادرة في حالة المسودة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__payment_approval__level__operations
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Operations Manager"
+msgstr "مدير العمليات"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_company__approval_threshold_2
+msgid "Operations Manager Approval Above"
+msgstr "موافقة مدير العمليات فوق"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_account_payment_register
+msgid "Pay"
+msgstr "دفع"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__payment_id
+msgid "Payment"
+msgstr "الدفعة"
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_form
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_company_form_inherit_payment_control
+msgid "Payment Approval"
+msgstr "موافقة الدفع"
+
+#. module: odt_supplier_payment_control
+#: model:ir.actions.act_window,name:odt_supplier_payment_control.payment_approval_action
+#: model:ir.ui.menu,name:odt_supplier_payment_control.payment_approval_menu
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_list
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.payment_approval_view_search
+msgid "Payment Approvals"
+msgstr "موافقات الدفع"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_payment_approval
+msgid "Payment approval"
+msgstr "موافقة الدفع"
+
+#. module: odt_supplier_payment_control
+#: model:res.groups,name:odt_supplier_payment_control.group_ceo_approver
+msgid "Payment approver (Chief Executive)"
+msgstr "معتمِد الدفعات (الرئيس التنفيذي)"
+
+#. module: odt_supplier_payment_control
+#: model:res.groups,name:odt_supplier_payment_control.group_ops_approver
+msgid "Payment approver (Operations)"
+msgstr "معتمِد الدفعات (العمليات)"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model,name:odt_supplier_payment_control.model_account_payment
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_res_partner__is_shareholder
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_res_users__is_shareholder
+msgid ""
+"Payments to this contact can never be posted to a payroll expense account; "
+"they go to the shareholder's account."
+msgstr "لا يمكن أبداً ترحيل الدفعات إلى جهة الاتصال هذه على حساب مصروفات رواتب؛ بل تُرحّل إلى حساب المساهم."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_account_account__is_payroll
+msgid "Payroll Expense Account"
+msgstr "حساب مصروفات رواتب"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__posted
+msgid "Posted"
+msgstr "مرحّلة"
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_form_inherit_payment_control
+msgid "Release Duplicate"
+msgstr "الإفراج عن المكررة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_account_account__is_payroll
+msgid ""
+"Salaries and other payroll expenses. A payment to a contact marked "
+"shareholder cannot be posted to this account."
+msgstr "الرواتب ومصروفات الأجور الأخرى. لا يمكن ترحيل دفعة إلى جهة اتصال مُعلَّمة كمساهم على هذا الحساب."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_partner__is_shareholder
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_res_users__is_shareholder
+msgid "Shareholder"
+msgstr "مساهم"
+
+#. module: odt_supplier_payment_control
+#: model:res.groups,comment:odt_supplier_payment_control.group_ceo_approver
+msgid ""
+"The Chief Executive: approves vendor payments above the third threshold."
+msgstr "الرئيس التنفيذي: يعتمد دفعات الموردين التي تتجاوز الحد الثالث."
+
+#. module: odt_supplier_payment_control
+#: model:res.groups,comment:odt_supplier_payment_control.group_ops_approver
+msgid ""
+"The Operations Manager: approves vendor payments above the second threshold."
+msgstr "مدير العمليات: يعتمد دفعات الموردين التي تتجاوز الحد الثاني."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__amount
+msgid "The amount of the payment approved."
+msgstr "مبلغ الدفعة المعتمدة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__level
+msgid ""
+"The approval level given: above the company's first, second or third "
+"threshold."
+msgstr "مستوى الموافقة الممنوحة: فوق الحد الأول أو الثاني أو الثالث للشركة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_account_payment__approval_ids
+msgid "The approvals given, one per level, with approver and date."
+msgstr "الموافقات الممنوحة، واحدة لكل مستوى، مع المعتمِد والتاريخ."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid ""
+"The bank account %(account)s of %(partner)s is not trusted. Verify it with "
+"the vendor and mark it trusted before paying it."
+msgstr "الحساب البنكي %(account)s الخاص بـ %(partner)s غير موثوق. تحقق منه مع المورد وعلّمه كموثوق قبل الدفع إليه."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__currency_id
+msgid "The payment's currency."
+msgstr "عملة الدفعة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__user_id
+msgid "The user who gave the approval."
+msgstr "المستخدم الذي منح الموافقة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__partner_id
+msgid "The vendor paid."
+msgstr "المورد المدفوع له."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__payment_id
+msgid "The vendor payment approved; its approvals go with it."
+msgstr "دفعة المورد المعتمدة؛ وتُحذف موافقاتها معها."
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/wizard/account_payment_register.py:0
+msgid ""
+"These bills cannot be paid because they are not matched to their purchase "
+"order and receipt (Should Be Paid is not Yes): %(bills)s. The Finance "
+"Manager can release a bill by setting it to Yes."
+msgstr "لا يمكن دفع هذه الفواتير لأنها غير مطابقة لأمر الشراء والاستلام (قيمة \"يجب دفعها\" ليست نعم): %(bills)s. يمكن للمدير المالي الإفراج عن الفاتورة بتعيينها إلى نعم."
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_form_inherit_payment_control
+msgid "This payment repeats an earlier one. Release it for payment anyway?"
+msgstr "هذه الدفعة تكرر دفعة سابقة. هل تريد الإفراج عنها للدفع رغم ذلك؟"
+
+#. module: odt_supplier_payment_control
+#. odoo-python
+#: code:addons/odt_supplier_payment_control/models/account_payment.py:0
+msgid ""
+"This payment waits for the %(level)s's approval, which you cannot give."
+msgstr "هذه الدفعة بانتظار موافقة %(level)s، وهي موافقة لا يمكنك منحها."
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_account_payment_search_inherit_payment_control
+msgid "To Approve"
+msgstr "بانتظار الموافقة"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__to_approve_ceo
+msgid "To Approve: Chief Executive"
+msgstr "بانتظار الموافقة: الرئيس التنفيذي"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__to_approve_finance
+msgid "To Approve: Finance Manager"
+msgstr "بانتظار الموافقة: المدير المالي"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields.selection,name:odt_supplier_payment_control.selection__account_payment__approval_state__to_approve_operations
+msgid "To Approve: Operations Manager"
+msgstr "بانتظار الموافقة: مدير العمليات"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,field_description:odt_supplier_payment_control.field_payment_approval__partner_id
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: odt_supplier_payment_control
+#: model:res.groups.privilege,name:odt_supplier_payment_control.res_groups_privilege_payment_approval
+msgid "Vendor Payment Approval"
+msgstr "اعتماد دفعات الموردين"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_res_company__approval_threshold_3
+msgid ""
+"Vendor payments above this amount also need the Chief Executive's approval. "
+"0 = no approval at this level."
+msgstr "دفعات الموردين التي تتجاوز هذا المبلغ تحتاج أيضاً إلى موافقة الرئيس التنفيذي. 0 = لا موافقة على هذا المستوى."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_res_company__approval_threshold_2
+msgid ""
+"Vendor payments above this amount also need the Operations Manager's "
+"approval. 0 = no approval at this level."
+msgstr "دفعات الموردين التي تتجاوز هذا المبلغ تحتاج أيضاً إلى موافقة مدير العمليات. 0 = لا موافقة على هذا المستوى."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_res_company__approval_threshold_1
+msgid ""
+"Vendor payments above this amount, in company currency, need the Finance "
+"Manager's approval. 0 = no approval at this level."
+msgstr "دفعات الموردين التي تتجاوز هذا المبلغ، بعملة الشركة، تحتاج إلى موافقة المدير المالي. 0 = لا موافقة على هذا المستوى."
+
+#. module: odt_supplier_payment_control
+#: model_terms:ir.ui.view,arch_db:odt_supplier_payment_control.view_company_form_inherit_payment_control
+msgid "Vendor payments need approval above"
+msgstr "تحتاج دفعات الموردين إلى موافقة فوق"
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_payment_approval__date
+msgid "When the approval was given."
+msgstr "وقت منح الموافقة."
+
+#. module: odt_supplier_payment_control
+#: model:ir.model.fields,help:odt_supplier_payment_control.field_account_payment__approval_state
+msgid ""
+"Where an outgoing vendor payment stands in the approvals its amount "
+"requires. Blocked: it repeats an earlier payment and waits for an "
+"administrator. Empty on payments the control does not cover."
+msgstr "موقع دفعة المورد الصادرة من الموافقات التي يتطلبها مبلغها. محظورة: تكرر دفعة سابقة وبانتظار مسؤول النظام. فارغة في الدفعات التي لا تشملها الرقابة."

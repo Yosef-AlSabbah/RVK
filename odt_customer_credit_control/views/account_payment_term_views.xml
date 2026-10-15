@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_payment_term_form_inherit_customer_credit_control" model="ir.ui.view">
+        <field name="name">account.payment.term.view.form.inherit.customer.credit.control</field>
+        <field name="model">account.payment.term</field>
+        <field name="inherit_id" ref="account.view_payment_term_form"/>
+        <field name="arch" type="xml">
+            <field name="early_discount" position="before">
+                <field name="advance_pct"/>
+            </field>
+        </field>
+    </record>
+</odoo>

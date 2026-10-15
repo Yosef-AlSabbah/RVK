@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_payment_form_inherit_payment_control" model="ir.ui.view">
+        <field name="name">account.payment.view.form.inherit.payment.control</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_post']" position="before">
+                <button name="action_approve" string="Approve" type="object" class="oe_highlight"
+                        invisible="state != 'draft' or approval_state not in ('to_approve_finance', 'to_approve_operations', 'to_approve_ceo')"
+                        groups="account.group_account_manager,odt_supplier_payment_control.group_ops_approver,odt_supplier_payment_control.group_ceo_approver"/>
+                <button name="action_release_duplicate" string="Release Duplicate" type="object"
+                        invisible="approval_state != 'blocked'"
+                        groups="base.group_system"
+                        confirm="This payment repeats an earlier one. Release it for payment anyway?"/>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <div class="alert alert-danger mb-2" role="alert" invisible="approval_state != 'blocked'">
+                    <span>This payment repeats </span>
+                    <field name="duplicate_of_id" readonly="1"/>
+                    <span> (same vendor, amount and reference). It is blocked until an administrator releases it.</span>
+                </div>
+                <widget name="web_ribbon" text="Approved" bg_color="text-bg-success"
+                        invisible="approval_state != 'approved'"/>
+            </xpath>
+            <xpath expr="//field[@name='memo']" position="after">
+                <field name="approval_state" widget="badge"
+                       invisible="not approval_state"
+                       decoration-warning="approval_state in ('to_approve_finance', 'to_approve_operations', 'to_approve_ceo')"
+                       decoration-danger="approval_state == 'blocked'"
+                       decoration-success="approval_state in ('approved', 'posted')"/>
+                <field name="is_duplicate_released" invisible="not is_duplicate_released"/>
+                <field name="destination_account_id"
+                       invisible="payment_type != 'outbound'"
+                       readonly="state != 'draft'"
+                       groups="account.group_account_user"/>
+            </xpath>
+            <xpath expr="//notebook[@name='payment_notebook']" position="inside">
+                <page string="Approvals" name="approvals"
+                      invisible="not approval_state"
+                      groups="account.group_account_user,odt_supplier_payment_control.group_ops_approver,odt_supplier_payment_control.group_ceo_approver">
+                    <field name="approval_ids" readonly="1">
+                        <list>
+                            <field name="level"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                            <field name="date"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_payment_tree_inherit_payment_control" model="ir.ui.view">
+        <field name="name">account.payment.view.list.inherit.payment.control</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree"/>
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="approval_state" widget="badge" optional="show"
+                       decoration-warning="approval_state in ('to_approve_finance', 'to_approve_operations', 'to_approve_ceo')"
+                       decoration-danger="approval_state == 'blocked'"
+                       decoration-success="approval_state in ('approved', 'posted')"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_payment_search_inherit_payment_control" model="ir.ui.view">
+        <field name="name">account.payment.view.search.inherit.payment.control</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search"/>
+        <field name="arch" type="xml">
+            <filter name="state_draft" position="before">
+                <filter string="To Approve" name="to_approve"
+                        domain="[('approval_state', 'in', ('to_approve_finance', 'to_approve_operations', 'to_approve_ceo'))]"/>
+                <filter string="Blocked Duplicates" name="blocked_duplicate"
+                        domain="[('approval_state', '=', 'blocked')]"/>
+                <separator/>
+            </filter>
+        </field>
+    </record>
+</odoo>

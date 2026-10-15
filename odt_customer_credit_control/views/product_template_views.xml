@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_form_view_inherit_customer_credit_control" model="ir.ui.view">
+        <field name="name">product.template.view.form.inherit.customer.credit.control</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='options']" position="inside">
+                <span name="special_option" class="d-inline-flex">
+                    <field name="is_special"/>
+                    <label for="is_special"/>
+                </span>
+                <span name="credit_excluded_option" class="d-inline-flex" invisible="not is_special">
+                    <field name="is_credit_excluded"/>
+                    <label for="is_credit_excluded"/>
+                </span>
+            </xpath>
+        </field>
+    </record>
+</odoo>

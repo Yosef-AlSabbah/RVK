@@ -1,0 +1,290 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odt_quotation_payment_terms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 07:11+0000\n"
+"PO-Revision-Date: 2026-10-15 07:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%(customer)s is on the credit watch list: the Operations Manager or the "
+"Finance Manager must approve sending %(order)s."
+msgstr ""
+"العميل %(customer)s على قائمة المراقبة الائتمانية: يجب أن يعتمد مدير "
+"العمليات أو المدير المالي إرسال %(order)s."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%(order)s holds special items, which need a payment term with at least "
+"%(minimum)s%% advance; %(term)s has %(advance)s%%. Choose a term with at "
+"least %(minimum)s%% advance."
+msgstr ""
+"يتضمن %(order)s أصنافًا خاصة تتطلب شرط دفع بدفعة مقدمة لا تقل عن "
+"%(minimum)s%%؛ وشرط %(term)s دفعته المقدمة %(advance)s%%. اختر شرطًا بدفعة "
+"مقدمة لا تقل عن %(minimum)s%%."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%(order)s is on %(term)s, which is not the customer's default payment term: "
+"the Finance Manager must approve it on the quotation before it is sent."
+msgstr ""
+"عرض السعر %(order)s على شرط الدفع %(term)s، وهو ليس شرط الدفع الافتراضي "
+"للعميل: يجب أن يعتمده المدير المالي على عرض السعر قبل إرساله."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid "%s does not need a payment term approval."
+msgstr "لا يحتاج %s إلى اعتماد شرط الدفع."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid "%s does not need a sending approval."
+msgstr "لا يحتاج %s إلى اعتماد الإرسال."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"%s has no payment term: select the payment term agreed with the customer "
+"before sending the quotation."
+msgstr ""
+"لا يوجد شرط دفع في %s: اختر شرط الدفع المتفق عليه مع العميل قبل إرسال عرض "
+"السعر."
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid "Approve Payment Term"
+msgstr "اعتماد شرط الدفع"
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid "Approve Sending"
+msgstr "اعتماد الإرسال"
+
+#. module: odt_quotation_payment_terms
+#: model:res.groups,comment:odt_quotation_payment_terms.group_send_approver
+msgid ""
+"Approves sending quotations to customers on the credit watch list (the "
+"Operations Manager and the Finance Manager)."
+msgstr ""
+"يعتمد إرسال عروض الأسعار إلى العملاء على قائمة المراقبة الائتمانية (مدير "
+"العمليات والمدير المالي)."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_res_company__display_name
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__display_name
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__term_approved_by_id
+msgid ""
+"Finance Manager who approved a payment term other than the customer's "
+"default on this quotation."
+msgstr ""
+"المدير المالي الذي اعتمد على عرض السعر هذا شرط دفع غير الشرط الافتراضي "
+"للعميل."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_res_company__id
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__id
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid "Only the Finance Manager can approve a quotation's payment term."
+msgstr "لا يعتمد شرط دفع عرض السعر إلا المدير المالي."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/sale_order.py:0
+msgid ""
+"Only the Operations Manager or the Finance Manager can approve sending a "
+"quotation to a customer on the credit watch list."
+msgstr ""
+"لا يعتمد إرسال عرض سعر إلى عميل على قائمة المراقبة الائتمانية إلا مدير "
+"العمليات أو المدير المالي."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__send_approved_by_id
+msgid ""
+"Operations or Finance Manager who approved sending this quotation to a "
+"customer on the credit watch list."
+msgstr ""
+"مدير العمليات أو المدير المالي الذي اعتمد إرسال عرض السعر هذا إلى عميل على "
+"قائمة المراقبة الائتمانية."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__term_approval_date
+msgid "Payment Term Approval Date"
+msgstr "تاريخ اعتماد شرط الدفع"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__term_approved_by_id
+msgid "Payment Term Approved By"
+msgstr "شرط الدفع معتمد من"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__is_term_approval_needed
+msgid "Payment Term Needs Approval"
+msgstr "شرط الدفع يحتاج إلى اعتماد"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: odt_quotation_payment_terms
+#: model:res.groups.privilege,name:odt_quotation_payment_terms.res_groups_privilege_quotation_approval
+msgid "Quotation Approval"
+msgstr "اعتماد عروض الأسعار"
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid "Quotation Approvals"
+msgstr "اعتمادات عرض السعر"
+
+#. module: odt_quotation_payment_terms
+#: model:res.groups,name:odt_quotation_payment_terms.group_send_approver
+msgid "Quotation Send Approver"
+msgstr "معتمد إرسال عروض الأسعار"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model,name:odt_quotation_payment_terms.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "بند أمر المبيعات"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__send_approval_date
+msgid "Sending Approval Date"
+msgstr "تاريخ اعتماد الإرسال"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__send_approved_by_id
+msgid "Sending Approved By"
+msgstr "الإرسال معتمد من"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order__is_send_approval_needed
+msgid "Sending Needs Approval"
+msgstr "الإرسال يحتاج إلى اعتماد"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_res_company__special_min_advance
+msgid ""
+"Smallest advance, from 0 to 100%, a payment term must carry for a quotation "
+"holding a special item to be sent. 0 means no minimum."
+msgstr ""
+"أقل دفعة مقدمة، من 0 إلى 100%، يجب أن يتضمنها شرط الدفع حتى يُرسل عرض سعر "
+"يتضمن صنفًا خاصًا. القيمة 0 تعني عدم وجود حد أدنى."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_purchase_order_line__is_special
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_sale_order_line__is_special
+msgid "Special Item"
+msgstr "صنف خاص"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,field_description:odt_quotation_payment_terms.field_res_company__special_min_advance
+msgid "Special Items Minimum Advance (%)"
+msgstr "الحد الأدنى للدفعة المقدمة للأصناف الخاصة (%)"
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__is_send_approval_needed
+msgid ""
+"The customer is on the credit watch list and sending the quotation has not "
+"been approved yet."
+msgstr "العميل على قائمة المراقبة الائتمانية ولم يُعتمد إرسال عرض السعر بعد."
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid ""
+"The customer is on the credit watch list: the Operations Manager or the "
+"Finance Manager must approve sending this quotation."
+msgstr ""
+"العميل على قائمة المراقبة الائتمانية: يجب أن يعتمد مدير العمليات أو المدير "
+"المالي إرسال عرض السعر هذا."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_purchase_order_line__is_special
+msgid ""
+"The product is a special item, as on the sales order line the purchase was "
+"raised for."
+msgstr "المنتج صنف خاص، كما في بند أمر البيع الذي أُنشئ الشراء من أجله."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order_line__is_special
+msgid ""
+"The product is a special item: its quotation needs the company's special-"
+"item minimum advance."
+msgstr ""
+"المنتج صنف خاص: يحتاج عرض سعره إلى الحد الأدنى للدفعة المقدمة للأصناف الخاصة"
+" في الشركة."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__is_term_approval_needed
+msgid ""
+"The quotation's payment term is not the customer's default and the Finance "
+"Manager has not approved it yet."
+msgstr ""
+"شرط دفع عرض السعر ليس الشرط الافتراضي للعميل ولم يعتمده المدير المالي بعد."
+
+#. module: odt_quotation_payment_terms
+#. odoo-python
+#: code:addons/odt_quotation_payment_terms/models/res_company.py:0
+msgid "The special items minimum advance is between 0 and 100%."
+msgstr "الحد الأدنى للدفعة المقدمة للأصناف الخاصة بين 0 و100%."
+
+#. module: odt_quotation_payment_terms
+#: model_terms:ir.ui.view,arch_db:odt_quotation_payment_terms.view_order_form_inherit_quotation_payment_terms
+msgid ""
+"This payment term is not the customer's default: the Finance Manager must "
+"approve it before the quotation is sent."
+msgstr ""
+"شرط الدفع هذا ليس الشرط الافتراضي للعميل: يجب أن يعتمده المدير المالي قبل "
+"إرسال عرض السعر."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__send_approval_date
+msgid "When sending to the watch-listed customer was approved."
+msgstr "وقت اعتماد الإرسال إلى العميل المدرج على قائمة المراقبة."
+
+#. module: odt_quotation_payment_terms
+#: model:ir.model.fields,help:odt_quotation_payment_terms.field_sale_order__term_approval_date
+msgid "When the payment term was approved."
+msgstr "وقت اعتماد شرط الدفع."

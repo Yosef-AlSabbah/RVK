@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_credit_exposure_salesman,credit.exposure salesman,model_credit_exposure,sales_team.group_sale_salesman,1,0,0,0
+access_credit_exposure_account_manager,credit.exposure account manager,model_credit_exposure,account.group_account_manager,1,0,0,0
+access_credit_decision_account_invoice,credit.decision invoicing,model_credit_decision,account.group_account_invoice,1,1,1,0
+access_credit_decision_account_manager,credit.decision account manager,model_credit_decision,account.group_account_manager,1,1,1,0

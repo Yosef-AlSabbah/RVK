@@ -1,0 +1,169 @@
+OdooTec Development Licence
+
+ODTL-1, version 1.4
+
+Prepared by: OdooTec Strategy and Transformation Division
+Date: 27 September 2026
+
+
+1. Owner
+
+This software, including its source code, design, data model, screens,
+workflows, documentation and every modified version of it (together, "the
+Module"), is the property of ODOO TEC, a limited liability company registered
+in the Arab Republic of Egypt under commercial register number 125545 at the
+Cairo Investment Commercial Registry Office, with its head office at Apartment
+8, Building 42, Afifi Towers, Metwally El Shaarawy Street, Nasr City, Cairo
+("the Owner").
+
+In this licence, "OdooTec" means the Owner and every company the Owner owns
+that supplies the Module, including Financial Center for Communication and
+Information Technology, commercial register number 4030216518, Kingdom of
+Saudi Arabia.
+
+All rights not expressly granted in this licence are reserved to the Owner.
+
+
+2. Scope
+
+This licence applies to every module that OdooTec develops and supplies.
+
+It does not apply to third-party modules, meaning modules that belong to others
+and are supplied under their owners' licences. Those licences govern them.
+
+The only modules developed by OdooTec that this licence does not apply to are
+modules named individually, by module name, in a signed agreement or a signed
+addendum between OdooTec and the client as owned by the client. Any module not
+named in that way is covered by this licence, whatever any other document says
+about the delivered work.
+
+
+3. Who receives rights
+
+Only a party holding a signed agreement with OdooTec under which the Module was
+supplied ("the Client") receives rights under this licence. Anyone else holding
+a copy of the Module has no right to use, run, copy, access, store or keep it,
+and must delete it.
+
+
+4. The Client's right of use
+
+Once the fees due for the Module are paid, the Client may install, run and use
+the Module on its own systems, for its own internal business purposes, without
+time limit. This right is non-exclusive and cannot be transferred. It ends only if the Client fails to
+pay fees due for the Module or breaches clause 6 or clause 7, and OdooTec gives
+the Client written notice of that failure or breach.
+
+
+5. People working for the Client
+
+The Client must protect the Module as this licence requires. The Client may
+allow its employees, and service providers working for it (including another
+implementation partner, auditors and hosting providers), to access the Module
+only to install, host, back up, maintain, support, audit or modify it for the
+Client's own use.
+
+Before giving any of them access, the Client must have each of them sign a
+written undertaking addressed to OdooTec, in which they commit to OdooTec
+directly to respect the Owner's ownership and copyright, the confidentiality in
+clause 7 and the restrictions in clause 6. The Client must keep these
+undertakings and give OdooTec a copy on request.
+
+The Client remains responsible to OdooTec for any breach by any of them. No one
+may gain any benefit from the Module other than the Client's own use of it
+under this licence.
+
+
+6. What is prohibited
+
+No one, including the Client and anyone given access under clause 5, may,
+without OdooTec's prior written permission:
+
+(a) copy the Module, except the copies strictly needed for the uses that
+    clauses 4 and 5 allow, which must stay under the Client's control;
+
+(b) sell, resell, rent, lend, distribute, publish or sublicense the Module, or
+    make it available to anyone not allowed by clause 5;
+
+(c) use the Module to provide a service to anyone other than the Client;
+
+(d) reverse engineer, decompile, analyse or study the Module to extract its
+    design, logic, structure, workflows or data model, for any purpose other
+    than the Client's own use;
+
+(e) create, or help anyone create, any software that copies, reproduces,
+    imitates or is substantially similar to the Module or any part of it,
+    including its features, workflows, screens or data model, using the Module
+    or any knowledge obtained from access to it;
+
+(f) use the Module, any part of it, or anything derived from it, with any
+    artificial intelligence or machine learning system, including to train,
+    fine-tune, evaluate or prompt such a system, to generate code,
+    documentation or designs, or as part of any dataset;
+
+(g) remove or change any ownership, copyright or licence notice in the Module.
+
+
+7. Confidentiality
+
+The source code, design and documentation of the Module are OdooTec's
+confidential information and trade secrets. The Client and anyone given access
+under clause 5 must keep them confidential, use them only as this licence
+allows, and protect them at least as carefully as they protect their own
+confidential information.
+
+
+8. Modification
+
+The Client may modify the Module for its own use under clauses 4 and 5. A
+modification does not give anyone ownership of the Module, and a modified
+Module remains subject to this licence in full.
+
+
+9. After an agreement ends
+
+Clauses 1, 3, 5, 6, 7, 9 and 13 continue to apply after any agreement between
+OdooTec and the Client ends, and after the right of use ends. If the right of
+use ends under clause 4, the Client must stop using the Module and delete every
+copy of it.
+
+
+10. Third-party components
+
+Some modules include or depend on software belonging to others, supplied under
+its own licence. Those licences apply to those parts, and where they conflict
+with this licence, they prevail for those parts only.
+
+
+11. No warranty
+
+The Module is supplied as it is. Warranties and support are only what the
+signed agreement provides, and this licence implies nothing more.
+
+
+12. The signed agreement
+
+Fees, warranties and support are governed by the signed agreement. No agreement
+removes a module from this licence except in the way clause 2 describes.
+
+
+13. Governing law and disputes
+
+Where the Client is established in the Kingdom of Saudi Arabia, this licence is
+governed by the laws of the Kingdom of Saudi Arabia, and the courts of the
+Kingdom of Saudi Arabia have jurisdiction over any dispute about it.
+
+Where the Client is established in any other country, this licence is governed
+by the laws of the Arab Republic of Egypt, and the courts of the Arab Republic
+of Egypt have jurisdiction over any dispute about it.
+
+Where the signed agreement between OdooTec and the Client provides for
+arbitration, disputes between OdooTec and the Client about this licence are
+resolved by that arbitration. Either of them may still ask the competent court
+for urgent measures to protect confidentiality or intellectual property.
+
+
+14. Version
+
+This is ODTL-1, version 1.4. OdooTec may publish later versions. A module
+carries the version named in its own files.

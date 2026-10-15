@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_groups_privilege_payment_approval" model="res.groups.privilege">
+        <field name="name">Vendor Payment Approval</field>
+        <field name="category_id" ref="base.module_category_accounting"/>
+        <field name="sequence">8</field>
+    </record>
+
+    <record id="group_ops_approver" model="res.groups">
+        <field name="name">Payment approver (Operations)</field>
+        <field name="sequence">60</field>
+        <field name="comment">The Operations Manager: approves vendor payments above the second threshold.</field>
+        <field name="privilege_id" ref="res_groups_privilege_payment_approval"/>
+        <field name="implied_ids" eval="[(4, ref('account.group_account_readonly'))]"/>
+    </record>
+
+    <record id="group_ceo_approver" model="res.groups">
+        <field name="name">Payment approver (Chief Executive)</field>
+        <field name="sequence">70</field>
+        <field name="comment">The Chief Executive: approves vendor payments above the third threshold.</field>
+        <field name="privilege_id" ref="res_groups_privilege_payment_approval"/>
+        <field name="implied_ids" eval="[(4, ref('account.group_account_readonly'))]"/>
+    </record>
+
+    <record id="payment_approval_rule_company" model="ir.rule">
+        <field name="name">Payment approval: own companies only</field>
+        <field name="model_id" ref="model_payment_approval"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

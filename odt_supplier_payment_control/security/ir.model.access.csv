@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payment_approval_account_user,payment.approval accountant,model_payment_approval,account.group_account_user,1,0,0,0
+access_payment_approval_account_manager,payment.approval finance manager,model_payment_approval,account.group_account_manager,1,0,1,0
+access_payment_approval_ops_approver,payment.approval operations approver,model_payment_approval,group_ops_approver,1,0,1,0
+access_payment_approval_ceo_approver,payment.approval chief executive approver,model_payment_approval,group_ceo_approver,1,0,1,0

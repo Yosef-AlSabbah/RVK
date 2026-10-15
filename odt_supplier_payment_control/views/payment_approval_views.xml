@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_approval_view_list" model="ir.ui.view">
+        <field name="name">payment.approval.view.list</field>
+        <field name="model">payment.approval</field>
+        <field name="arch" type="xml">
+            <list string="Payment Approvals" create="false" edit="false" delete="false">
+                <field name="date"/>
+                <field name="payment_id"/>
+                <field name="partner_id"/>
+                <field name="amount"/>
+                <field name="currency_id" column_invisible="True"/>
+                <field name="level"/>
+                <field name="user_id" widget="many2one_avatar_user"/>
+                <field name="company_id" groups="base.group_multi_company" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="payment_approval_view_form" model="ir.ui.view">
+        <field name="name">payment.approval.view.form</field>
+        <field name="model">payment.approval</field>
+        <field name="arch" type="xml">
+            <form string="Payment Approval" create="false" edit="false" delete="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="payment_id"/>
+                            <field name="partner_id"/>
+                            <field name="amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="level"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                            <field name="date"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="payment_approval_view_search" model="ir.ui.view">
+        <field name="name">payment.approval.view.search</field>
+        <field name="model">payment.approval</field>
+        <field name="arch" type="xml">
+            <search string="Payment Approvals">
+                <field name="payment_id"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <filter string="Finance Manager" name="level_finance" domain="[('level', '=', 'finance')]"/>
+                <filter string="Operations Manager" name="level_operations" domain="[('level', '=', 'operations')]"/>
+                <filter string="Chief Executive" name="level_ceo" domain="[('level', '=', 'ceo')]"/>
+                <separator/>
+                <filter string="Approval Date" name="date" date="date"/>
+                <group>
+                    <filter string="Level" name="group_level" context="{'group_by': 'level'}"/>
+                    <filter string="Approver" name="group_user" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="payment_approval_action" model="ir.actions.act_window">
+        <field name="name">Payment Approvals</field>
+        <field name="res_model">payment.approval</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No payment approval yet</p>
+            <p>Approvals are given from vendor payments above the company thresholds, with the Approve button.</p>
+        </field>
+    </record>
+
+    <menuitem id="payment_approval_menu"
+              name="Payment Approvals"
+              parent="account.menu_finance_payables"
+              action="payment_approval_action"
+              sequence="25"
+              groups="account.group_account_user,group_ops_approver,group_ceo_approver"/>
+</odoo>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_customer_credit_control" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.customer.credit.control</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']" position="after">
+                <page string="Credit Control" name="credit_control" invisible="parent_id">
+                    <div class="mb-3">
+                        <button name="%(credit_decision_action)d" type="action" string="Put on Watch List"
+                                context="{'default_decision': 'flag'}" class="btn-secondary me-1"
+                                invisible="is_credit_flagged or credit_state == 'block'"
+                                groups="account.group_account_invoice"/>
+                        <button name="%(credit_decision_action)d" type="action" string="Remove Finance Flag"
+                                context="{'default_decision': 'unflag'}" class="btn-secondary me-1"
+                                invisible="not is_credit_flagged"
+                                groups="account.group_account_invoice"/>
+                        <button name="%(credit_decision_action)d" type="action" string="Put on Credit Hold"
+                                context="{'default_decision': 'hold'}" class="btn-secondary me-1"
+                                invisible="credit_state in ('hold', 'block')"
+                                groups="account.group_account_manager"/>
+                        <button name="%(credit_decision_action)d" type="action" string="Lift Credit Hold"
+                                context="{'default_decision': 'lift_hold'}" class="btn-primary me-1"
+                                invisible="credit_state != 'hold'"
+                                groups="account.group_account_manager"/>
+                        <button name="%(credit_decision_action)d" type="action" string="Absolute Block"
+                                context="{'default_decision': 'block'}" class="btn-danger me-1"
+                                invisible="credit_state == 'block'"
+                                confirm="Block every quotation, order, delivery and invoice for this customer?"
+                                groups="account.group_account_manager"/>
+                        <button name="%(credit_decision_action)d" type="action" string="Lift Absolute Block"
+                                context="{'default_decision': 'unblock'}" class="btn-primary me-1"
+                                invisible="credit_state != 'block'"
+                                groups="account.group_account_manager"/>
+                    </div>
+                    <group>
+                        <group string="Credit State">
+                            <field name="credit_state" widget="badge" readonly="1"
+                                   decoration-success="credit_state == 'normal'"
+                                   decoration-warning="credit_state == 'watch'"
+                                   decoration-danger="credit_state in ('hold', 'block')"/>
+                            <field name="is_credit_flagged" readonly="1"/>
+                            <field name="credit_state_reason" readonly="1"/>
+                        </group>
+                        <group string="Monthly Cap">
+                            <field name="credit_cap_pct" groups="account.group_account_manager"/>
+                        </group>
+                    </group>
+                    <field name="hold_cleared_invoice_ids" readonly="1" groups="account.group_account_manager"
+                           invisible="not hold_cleared_invoice_ids">
+                        <list>
+                            <field name="name"/>
+                            <field name="invoice_date_due"/>
+                            <field name="amount_residual_signed"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_inherit_customer_credit_control" model="ir.ui.view">
+        <field name="name">res.partner.view.search.inherit.customer.credit.control</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='type_company']" position="after">
+                <separator/>
+                <filter string="Credit Watch List" name="credit_watch" domain="[('credit_state', '=', 'watch')]"/>
+                <filter string="Credit Hold or Block" name="credit_held" domain="[('credit_state', 'in', ('hold', 'block'))]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

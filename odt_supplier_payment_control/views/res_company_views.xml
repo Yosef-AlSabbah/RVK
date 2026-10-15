@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_inherit_payment_control" model="ir.ui.view">
+        <field name="name">res.company.view.form.inherit.payment.control</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Payment Approval" name="payment_approval">
+                    <group string="Vendor payments need approval above">
+                        <field name="approval_threshold_1"/>
+                        <field name="approval_threshold_2"/>
+                        <field name="approval_threshold_3"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
